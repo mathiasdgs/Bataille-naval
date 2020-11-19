@@ -1,0 +1,358 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #2F677E;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-x: hidden;
+    font-family: 'Rajdhani', sans-serif;
+    color: white;
+    width: 100%;
+    height: 100%;
+    text-shadow: 1.5px 1.5px 2px #000000a3;
+    font-size: 18px;
+}
+
+video {
+
+    position: fixed;
+    object-fit: fill;
+    border-style: none;
+    z-index: -2;
+    height: 100%;
+    width: 100%; 
+}
+
+a {
+    color: rgba(9, 255, 0, 0.63);
+    font-weight: 600;
+    font-size: 1.6vw;
+    text-shadow: 1.5px 1.5px 2px #000000a3;
+    text-decoration: none;
+    margin-left: 1vh;
+    width: 12%;
+}
+a:hover {
+    color: rgb(255, 136, 0);
+}
+ul{
+    font-size: 1vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+li {
+    font-size: 1vw;
+}
+select {
+    color: white;
+}
+.boxUser {
+    border: 0.1vh solid rgba(255, 255, 255, 0.493);
+    background: rgb(75, 0, 128);
+    width: 100%;
+    height: 100%;
+}
+.ship0, .ship1, .ship2, .ship3, .ship4 {
+    border: 0.1vh solid rgba(255, 255, 255, 0.493);
+    background: rgba(9, 255, 0, 0.493);
+    width: 100%;
+    height: 100%;
+}
+.ship0:hover, .ship1:hover, .ship2:hover, .ship3:hover, .ship4:hover {
+    border: 0.1vh solid rgba(255, 255, 255, 0.493);
+    background: rgba(255, 136, 0, 0.575);
+    width: 100%;
+    height: 100%;
+}
+.shipIA0, .shipIA1, .shipIA2, .shipIA3, .shipIA4 {
+    border: 0.1vh solid rgba(255, 255, 255, 0.493);
+    background: rgba(54, 1, 1, 0.788);
+    width: 100%;
+    height: 100%;
+}
+p {
+    font-size: 2vw;
+    display: none;
+}
+#map{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: auto;
+}
+.userOnLobby{
+    display: none;
+}
+#allShipsDiv, #secondPlayer {
+    width: 25%;
+    height: 50vh;
+    background: transparent;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    box-shadow:2px 2px 4px #000000a4;
+}
+
+#allShipsDiv :nth-child(1), #secondPlayer :nth-child(1) {
+    border-top-left-radius: 5px;
+}
+#allShipsDiv :nth-child(10), #secondPlayer :nth-child(10) {
+    border-top-right-radius: 5px;
+}
+#allShipsDiv :nth-child(91), #secondPlayer :nth-child(91) {
+    border-bottom-left-radius: 5px;
+}
+#allShipsDiv :nth-child(100), #secondPlayer :nth-child(100) {
+    border-bottom-right-radius: 5px;
+}
+.box, .noTarget {
+    background: transparent;
+    border: 0.1vh solid white;
+    width: 100%;
+    height: 100%;
+}
+#secondPlayer:hover{
+    cursor: crosshair;
+}
+.Target{
+    background-image: url(../img/target.png);
+    background-size: 100% 100%;
+}
+#logs{
+    display: flex;
+    margin-left: 15%;
+    color: greenyellow;
+    font-weight: 600;
+    margin-bottom: 3%;
+    width: 70%;
+    margin-right: 15%;
+}
+#shipList {
+    display: flex;
+    flex: 1;
+    margin-right: 4%;
+    justify-content: center;
+    width: 50%;
+}
+
+#allowHit {
+    z-index: 3;
+    width: 13.2%;
+    height: 4vh;
+    top: 5.5%;
+    text-align: center;
+    background-color: #2f687e81;
+    border-radius: 5px;
+    font-size: 2vw;
+    font-weight: 700;
+    color: rgba(9, 255, 0, 0.63);
+    cursor: pointer;
+    padding-top: 0.5%;
+    animation: cssAnimation 0s 5s forwards;
+    transition: all 0.5s;
+    line-height: 3.5vh;
+    text-shadow: 1.5px 1.5px 2px #000000a3;
+    box-shadow: 2px 4px 8px #00000054;
+    position: absolute;
+    left: 43%;
+    border-width: 1px;
+    border:0.4vh outset  rgba(9, 255, 0, 0.63);
+    overflow: hidden;
+    transform: scale(1);
+}
+
+@keyframes cssAnimation {
+    to   { visibility: visible; }
+}
+
+#allowHit:hover {
+    background-color: #2f687e81;
+    color: rgb(255, 136, 0);
+    transition: all 0.5s;
+    cursor: pointer;
+    transform: scale(1.2);
+    border-color: rgb(255, 136, 0);
+}
+
+#history {
+    color: greenyellow;
+    font-weight: 600;
+    display: flex;
+    flex: 1;
+    height: 14%;
+    margin-left: 20%;
+    justify-content: space-evenly;
+    line-height: 25px;
+    width: 50%;
+}
+#userHit, #opponent {
+    width: 20%;
+    height: auto;
+    background-color:  #2f687e81;
+    border:1px solid transparent;
+}
+
+.select-selected:after{
+    border:1px solid transparent;
+    background-color:  #2f687e81;
+}
+.select-items {
+    background-color:  #2f687e81;
+}
+.select-items div,.select-selected {
+    cursor: pointer;
+}
+.miss{
+    background: #083242bd;
+    background-image: url("../img/water5.jpg");
+    background-size: 100% 100%;
+}
+.miss:hover, .boom:hover {
+    cursor: no-drop;
+}
+.box:hover {
+    cursor: default;
+}
+.boom {
+    background: rgba(54, 1, 1, 0.788);
+    background-image: url("../img/XPLO2.gif");
+    background-size: 100% 100%;
+}
+.debris {
+    background-image: url('../img/shipwreck.png');
+    background-size: 100% 100%;
+    border: 0.1vh solid white;
+}
+#speakerOn {
+    position: absolute;
+    right: 1vh;
+    top: 1vh;
+    width: 2.5vw;
+    cursor: pointer;
+    filter: drop-shadow(10px 10px 10px #000000a3);
+}
+
+#speakerOff {
+    position: absolute;
+    right: 1vh;
+    top: 1vh;
+    width: 2.5vw;
+    cursor: pointer;
+    filter: drop-shadow(10px 10px 10px #000000a3);
+}
+#audioDiv {
+    display: none;
+}
+
+.none {
+    display: none;
+    }
+
+@media all and (max-width: 1080px){
+    ul, li {
+        font-size: 1.5vw;
+    }
+    #allShipsDiv, #secondPlayer {
+        width: 40%;
+    }
+    #logs {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+  
+  
+}
+@media all and (max-width: 850px){
+    ul, li {
+        font-size: 2vw;
+    }
+    #allShipsDiv, #secondPlayer {
+        width: 40%;
+    }
+    #logs {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+  
+  
+}
+@media all and (max-width: 750px){
+    ul, li {
+        font-size: 2.6vw;
+    }
+    #map {
+        display: flex;
+        width: 100%;
+        height: 70%;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: space-between;
+    }
+    #allShipsDiv, #secondPlayer {
+        height: 30vh;
+    }
+    #shipList {
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        position: absolute;
+        top: 23%;
+        flex-direction: column;
+        left: 0;
+        margin-left: 2%;
+        flex-wrap: wrap;
+        width: 20%;
+    }
+    #history {
+        color: greenyellow;
+        font-weight: 600;
+        display: flex;
+        flex: 1;
+        height: 70%;
+        justify-content: space-evenly;
+        line-height: 15px;
+        width: 57%;
+        position: absolute;
+        top: 25%;
+        margin-right: 1%;
+        flex-direction: column-reverse;
+        left: 59%;
+        margin-left: 14%;
+    }
+    #iaLogs {
+        position: absolute;
+        top: 0;
+    }
+    #usrLogs {
+        position: absolute;
+        top: 57%;
+    }
+    #userHit {
+        margin-left: 15%;
+        position: absolute;
+        top: 57%;
+    }
+    #opponent {
+        position: absolute;
+        top: 0;
+        margin-left: 15%;
+    }
+    #speakerOn, #speakerOff {
+        position: absolute;
+        right: 1vh;
+        top: 2vh;
+        width: 5%;
+        cursor: pointer;
+    }
+    a {
+        width: 17%;
+        margin-top: 1vh;
+        font-size: 2.6vw; 
+    }
+    #allowHit {
+        font-size: 4vw;
+    }
+    
+
+}

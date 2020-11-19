@@ -1,0 +1,280 @@
+body{
+    background: linear-gradient(to right,#11586F,90%, transparent),
+    url("../img/warship5.jpg");
+    background-position: right;
+    background-color: #11586F;
+    font-family: 'Rajdhani', sans-serif;
+    color: white;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+#logOut {
+    color: rgb(9, 255, 0);
+    transition: all 0.5s;
+    font-weight: 600;
+    margin-left: 1vh;
+    text-shadow: 1.5px 1.5px 2px #000000a3;
+}
+#logOut:hover{
+    color: rgb(255, 136, 0);
+    transition: all 0.5s;
+}
+
+/*********** SECTION CHAT ***********/
+
+.deco a {
+    margin-left: 1vh;
+    color: white;
+    font-weight: 600;
+    color: rgb(9, 255, 0);
+}
+.deco a:hover{
+    color: rgb(255, 136, 0);
+}
+#username{
+
+    margin-left: 1vh;
+
+}
+
+#main {
+    width: 100%;
+    height: 95%;
+    display: flex;
+    margin-top: 3vh;
+}
+#leftPanel {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    height: auto;
+}
+
+
+#divContent {
+    width: 50%;
+    height: auto;
+}
+#onlineUsers {
+    display: flex;
+    flex-direction: column;
+    color: rgb(9, 255, 0);
+    font-weight: 600;
+    margin-left: 1vh;
+    background: #2F677E;
+    border: rgba(255, 255, 255, 0.514) solid;
+    border-radius: 5px;
+    border-width: 1px;
+    padding-top: 1%;
+    padding-bottom: 0.5%;
+    width: 13%;
+    height: 80%;
+    padding-left: 1%;
+    padding-right: 1%;
+    box-shadow: 2px 4px 11px #000000a3;
+}
+.user {
+    color: rgb(9, 255, 0);
+    text-decoration: none;
+    font-weight: 300;
+
+}
+.mail {
+    display: none;
+}
+
+.date {
+    display: none;
+}
+.chat {
+    color: white;
+    height: 100%;
+    width: 80%;
+    margin-left: 1vh;
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+#chatbox{
+    background: #2F677E;
+    border: rgba(255, 255, 255, 0.514) solid;
+    border-radius: 5px;
+    border-width: 1px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    width: 100%;
+    height: 80%;
+    box-shadow: 2px 4px 11px #000000a3;
+}
+.messages{
+    width: 100%;
+    height: 100%;
+    overflow-wrap: break-word;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.message {
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 85%;
+    height: auto;
+    position: relative;
+    bottom: 0;
+    margin-top: 3%;
+
+}
+span.content{
+    width: 50%;
+    height: auto;
+}
+#content {
+    width: 78%;
+    height: 5vh;
+    background: #1b5166;
+    border: rgba(255, 255, 255, 0.514) solid;
+    border-radius: 5px;
+    border-width: 1px;
+    color: white;
+    box-shadow: 2px 4px 11px #000000a3;
+    padding-left: 5%;
+}
+
+#content::placeholder {
+    text-align: center;
+    color: white;
+}
+
+button {
+    width: 20%;
+    height: 5vh;
+    text-align: center;
+    background: #1b5166;
+    border: rgba(255, 255, 255, 0.514) solid;
+    border-radius: 5px;
+    border-width: 1px;
+    color: white;
+    box-shadow: 2px 4px 11px #000000a3;
+}
+
+form {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.ull {
+    color: white;
+    display: none;
+}
+#belowChat {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 100%;
+
+}
+
+
+/*********** SECTION SALON ***********/
+
+p.salon {
+    font-weight: 300;
+}
+#salon {
+    width: 50%;
+    color: white;
+    height: auto;
+    text-align: center;
+    margin-right: 1vh;
+}
+#salon a{
+    color: rgb(9, 255, 0);
+    transition: all 0.5s;
+}
+#salon a:hover{
+    color: rgb(255, 136, 0);
+    font-size: 1.5em;
+    transition: all 0.5s;
+}
+#editmap{
+    width: 100%;
+    height: 43vh;
+    background: #2F677E;
+    border: rgba(255, 255, 255, 0.514) solid;
+    border-radius: 5px;
+    border-width: 1px;
+    color: white;
+    font-weight: 600;
+    opacity: 0.7;
+    box-shadow: 2px 4px 11px #000000a3;
+    overflow: hidden;
+}
+#salon1, #salon2, #salon3, #salon4 {
+    width: 100%;
+    height: 10vh;
+    background: #2F677E;
+    border: rgba(255, 255, 255, 0.514) solid;
+    border-radius: 5px;
+    border-width: 1px;
+    color: white;
+    margin-top: 1%;
+    font-weight: 600;
+    opacity: 0.7;
+    box-shadow: 2px 4px 11px #000000a3;
+    overflow: hidden;
+}
+
+/********** MAP **********/
+#previewUser {
+    width: 25vw;
+    height: 25vh;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    margin: auto;
+    margin-top: 1vh;
+    box-shadow: 2px 4px 11px #000000a3;
+}
+
+#allShips{
+    display: none;
+}
+
+.box {
+    background: transparent;
+    border: 0.1vh solid white;
+    z-index: 2;
+}
+
+.box2 {
+    border: 0.1vh solid rgba(255, 255, 255, 0.404);
+    background: rgb(37, 57, 70);
+    z-index: 2;
+}
+#ship0, #ship1, #ship2, #ship3, #ship4 {
+    margin-top: 0.5vh;
+    text-shadow: 1.5px 1.5px 2px #000000a3;
+}
+    
+
+#mapPlusPos {
+    display: flex;
+    flex-direction: column;
+}
+
+#previewUser :nth-child(1) {
+    border-top-left-radius: 5px;
+}
+#previewUser :nth-child(10) {
+    border-top-right-radius: 5px;
+}
+#previewUser :nth-child(91) {
+    border-bottom-left-radius: 5px;
+}
+#previewUser :nth-child(100) {
+    border-bottom-right-radius: 5px;
+}

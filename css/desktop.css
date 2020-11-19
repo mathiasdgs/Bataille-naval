@@ -1,0 +1,39 @@
+/********** Desktop **********/
+
+@media all and (min-width: 1200px){
+
+     html{
+          font-size: 20px;
+     }
+}
+
+@media all and (min-width: 960px){
+     html{
+          font-size: 18px;
+     }
+     .mp4{
+          width: 100vw;
+          height: 100vh;
+     }
+      
+     #imgbkg {
+          object-fit: cover;
+          width: 100vw;
+          height: 100vh;
+     }
+      
+     #formulaire {
+          margin-top: 30%;
+     }
+      
+     #pseudo {
+          width: 30%;
+          height: 8vh;
+     }
+      
+     #mdp {
+          width: 30%;
+          height: 8vh;
+     }
+     
+}

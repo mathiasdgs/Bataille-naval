@@ -1,0 +1,288 @@
+
+#username{
+    display: none;
+}
+#timer{
+    display: none;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #2F677E;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.5vw;
+}
+
+video {
+
+    position: fixed;
+    object-fit: fill;
+    border-style: none;
+    z-index: -2;
+    height: 100%;
+    width: 100%; 
+}
+
+
+
+#mapUser {
+    width: 45vw;
+    height: 90vh;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    margin-right: 7vw;
+    z-index: 2;
+    margin-top: 5vh;
+}
+.box {
+    background: transparent;
+    border: 0.1vh solid white;
+    z-index: 2;
+}
+
+.box2 {
+    border: 0.1vh solid rgba(255, 255, 255, 0.315);
+    background: rgba(33, 160, 1, 0.603);
+    z-index: 2;
+}
+
+p {
+    font-size: 1vw;
+    text-align: center;
+
+    color: rgb(160, 0, 0);
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 2em  ;
+    font-weight: 700;
+    text-decoration: underline;
+    display: none;
+}
+#ships {
+    display: flex;
+    flex-direction: column;
+    width:50vw;
+    margin-top: 32vh;
+    margin-left: 4vw;
+
+}
+
+.ships{
+    display: flex;
+    margin: auto;
+    width: 20vw;
+    height: 6vh;
+    justify-content: space-evenly;
+    color: white;
+    font-weight: 600;
+    line-height: 38px;
+    background: #2f687e65;
+    text-shadow: 1.5px 1.5px 2px #000000a3;
+    box-shadow:2px 2px 4px #000000a4;
+}
+.ships:hover{
+    background-color: #2F677E;
+}
+#d0 {
+    border-top: 1px;
+    border:1px solid white;
+    border-bottom: 0px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+   
+}
+#d1 {
+    border:1px solid white;
+    border-top: 0px;
+    border-bottom: 0px;
+    
+}
+#d2{
+    border:1px solid white;
+    border-top: 0px;
+    border-bottom: 0px;
+   
+}
+#d3 {
+    border:1px solid white;
+    border-top: 0px;
+    border-bottom: 0px;
+   
+}
+#d4 {
+    border:1px solid white;
+    border-top: 0px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    
+}
+
+input{
+    border-radius:5px ;
+    background-color: #2F677E;
+    color: #ffffff;
+    margin-left: 1vw;
+    margin-top: 2vh;
+    border-width: 1px;
+    border-style: none;
+    text-shadow: 1.5px 1.5px 2px #000000a3;
+    box-shadow:2px 2px 4px #000000a4;
+    transition: all 0.5s;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    cursor: pointer;
+}
+input:hover{
+    transition: all 0.5s;
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    cursor: pointer;
+}
+#submitMap{
+    display: flex;
+    justify-content: center;
+}
+.mapBtn {
+    width: 5vw;
+    height: 4vh;
+}
+
+#inputShip1:hover{
+    cursor: url('../img/bateaux1.png'), auto;
+}
+
+#mapUser :nth-child(1) {
+    border-top-left-radius: 5px;
+}
+#mapUser :nth-child(10) {
+    border-top-right-radius: 5px;
+}
+#mapUser :nth-child(91) {
+    border-bottom-left-radius: 5px;
+}
+#mapUser :nth-child(100) {
+    border-bottom-right-radius: 5px;
+}
+
+.ships:hover{
+    background-color: rgb(97, 35, 35);
+    
+}
+.ships2{
+    display: flex;
+    margin: auto;
+    width: 20vw;
+    height: 6vh;
+    justify-content: space-evenly;
+    color: white;
+    font-weight: 600;
+    line-height: 38px;
+    background: #2f687e65;
+    text-shadow: 1.5px 1.5px 2px #000000a3;
+    box-shadow:2px 2px 4px #000000a4;
+    background-color: rgba(38, 190, 0, 0.548);
+    
+}
+#previewUser {
+    width: 25vw;
+    height: 25vh;
+    border: 0.1vh solid;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+}
+#logShip0,#logShip1,#logShip2,#logShip3,#logShip4{
+    display: none;
+}
+#out:hover,#logOut:hover{
+
+    color: rgb(255, 136, 0);
+}
+#out{
+    width: 8%;
+    height: 4%;
+    color: rgba(9, 255, 0, 0.63);
+    position: absolute;
+    left: 1vh;
+    top: 1vh;
+   font-weight: 600;
+    text-decoration: none;
+    text-shadow: 1.5px 1.5px 2px #000000a3;
+}
+#logOut{
+    width: 8%;
+    height: 4%;
+    color: rgba(9, 255, 0, 0.63);
+    position: absolute;
+    left: 1vh;
+    top: 5vh;
+   font-weight: 600;
+    text-decoration: none;
+    text-shadow: 1.5px 1.5px 2px #000000a3;
+}
+#boxBtn{
+    /* display: flex;
+    flex-direction: column; */
+    position: absolute;
+    left: 0;
+    top: 0;
+    
+}
+
+#speakerOn {
+    position: absolute;
+    right: 1vh;
+    top: 1vh;
+    width: 2.5vw;
+    cursor: pointer;
+    filter: drop-shadow(10px 10px 10px #000000a3);
+}
+
+#speakerOff {
+    position: absolute;
+    right: 1vh;
+    top: 1vh;
+    width: 2.5vw;
+    cursor: pointer;
+    filter: drop-shadow(10px 10px 10px #000000a3);
+}
+
+.none {
+display: none;
+}
+#audioDiv {
+    display: none;
+}
+@media all and (max-width: 576px){
+    #mapUser{
+        position: absolute;
+        top: 8%;
+        left: 17%;
+        width: 68vw;
+        height: 47vh;
+    }
+    #ships {
+        position: relative;
+        top: 30%;
+        width: 100%;
+        margin-left: 2vw;
+    }
+    .ships{
+        width: 68vw;
+    }
+    .mapBtn {
+        width: 12vw;
+    }
+    #out, #logOut{
+        font-size: 3vw;
+    }
+    #speakerOn, #speakerOff {
+        width: 3vh;
+        height: 3vh;
+    }
+
+} 

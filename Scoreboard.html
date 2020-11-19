@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" href="css/ScoreBoard.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;600;700&amp;display=swap" rel="stylesheet">
+    <title>ScoreBoard</title>
+    <script type="text/javascript" src="js/ScoreBoard.js" defer ></script>
+</head>
+<body>
+    <div id="contain">
+        <div id="titre">
+            <h1>ScoreBoard</h1>
+        </div>
+
+        <div id="stitre">
+            <p>Results</p>
+        </div>
+
+        <div id="score">
+          
+        </div>
+    </div>
+    <div id="boutonscorboard">
+<a href="NewMap.php" id="btn1" class="btnsb"  >↺</a>
+<a href="game.php"  id="btn2" class="btnsb"   >x</a>
+</div>
+
+<img src="img/speakerOff.png" id="speakerOff" class="none" >
+<img src="img/speaker.png" id="speakerOn" class="none">
+<audio id="audioDiv" controls="false" autoplay="autoplay" loop preload="auto">
+<source src="mp3/bs.mp3" type="audio/mp3">
+
+</audio>
+
+<script src="js/audio.js" defer></script>
+</body>
+
+</html>

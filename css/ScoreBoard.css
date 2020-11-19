@@ -1,0 +1,158 @@
+body{
+    z-index: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../img/ee03ec96ac4e47aca39477e7427ddf09.jpg');
+    background-size: 100% 100%;
+    /* background-position: fixed; */
+    font-family: 'Rajdhani', sans-serif;
+   
+    overflow: hidden;
+}
+
+#contain{
+
+    z-index: 2;
+    right: 40vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+}
+
+#titre{
+    display: 1;
+    color: #2F677E;
+    font-family: 'Rajdhani', sans-serif;
+    text-shadow:8px 8px 8px #3b3b3b;
+}
+
+#stitre{
+    display: 1;
+    color: #2F677E;
+    font-size: large;
+    font-family: 'Rajdhani', sans-serif;
+    margin-top: -28px;
+    text-shadow:8px 8px 8px #3b3b3b;
+
+
+}
+
+#score{
+    display: 1;
+    width: 50vw;
+    height: 50vh;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.box{
+    display: flex;
+    /* justify-content: space-between; */
+    margin-top: 6%;
+    border: solid rgba(94, 94, 94, 0.315) 2px;
+    background-color: #0000006b;
+    width: 48vw;
+    border-radius: 8px;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+    color: rgb(9, 255, 0);
+    align-items: center;
+    justify-content: space-around;
+}
+.box:hover{
+    cursor: cell;
+ 
+
+    box-shadow:2px 2px 8px #ffffff;
+   align-items: center;
+   justify-content: space-around;
+
+}
+p.user{
+    font-size: 2vw;
+    
+}
+
+h1{
+
+    font-size: 2.5em;
+    font-weight: 600;
+}
+
+#boutonscorboard{
+    position: absolute;
+    z-index: 3;
+    right: 10vw;
+    bottom:3vw;
+
+
+}
+a{
+    margin: 1vw;
+    width: 4vw;
+    height: 9vh;
+    border-radius:100% ;
+    background-color: #2F677E;
+    color: #ffffff;
+    display: block;
+    text-align: center;
+    font-size: 4vw;
+    text-decoration: none;
+    position: absolute;
+
+
+}
+#btn1{
+    right: 0;
+bottom: 0;
+}
+#btn2{
+    right: 1;
+    bottom: 0;
+}
+a:hover{
+    box-shadow:2px 2px 8px #ffffff;
+    cursor: pointer
+
+}
+
+#audioDiv {
+    display: none;
+}
+
+#speakerOn {
+    position: absolute;
+    right: 1vh;
+    top: 1vh;
+    width: 2.5vw;
+    cursor: pointer;
+    filter: drop-shadow(10px 10px 10px #000000a3);
+}
+
+#speakerOff {
+    position: absolute;
+    right: 1vh;
+    top: 1vh;
+    width: 2.5vw;
+    cursor: pointer;
+    filter: drop-shadow(10px 10px 10px #000000a3);
+}
+
+.none {
+display: none;
+}
+
+@media all and (max-width: 960px) {
+    .box{
+        width: 40vw;
+        height: 11.2vh;
+    }
+    body{
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
